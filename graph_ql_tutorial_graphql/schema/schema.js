@@ -114,20 +114,6 @@ const RootQuery = new GraphQLObjectType({
   }
 });
 
-const Mutation = new GraphQLObjectType({
-  name: "Mutation",
-  fields: {
-    addAuthor: {
-      type: AutorType,
-      args: {
-        name: { type: GraphQLString },
-        age: { type: GraphQLInt }
-      },
-      resolve(parente, args) {}
-    }
-  }
-});
-
 module.exports = new GraphQLSchema({
   query: RootQuery
 });
