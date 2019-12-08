@@ -4,7 +4,7 @@ const ObjectID = require("mongodb").ObjectID;
 const MyMongoLib = function() {
   const exports = this || {};
   // Connection URL
-  let url = "mongodb://mateo:m12345@ds253428.mlab.com:53428/gql-web";
+  let url = process.env.MONGO_URI;
   let conn = MongoClient.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
